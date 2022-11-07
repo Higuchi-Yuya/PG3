@@ -47,12 +47,8 @@ int main(int argc,const char*argv[]) {
 	// ユーザーの入力を受付し、数に代入
 	scanf_s("%d", &number);
 
+	// 3秒後に実行するように
 	setTimeOut(fx, 3, number);
-	//// 3秒後に実行するように
-	//Sleep(3000);
-
-	//// 関数を呼び出し
-	//fx(number);
 
 	return 0;
 }
