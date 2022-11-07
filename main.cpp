@@ -3,6 +3,16 @@
 #include <Windows.h>
 #include <time.h>
 
+
+void setTimeOut(std::function<void(int)> p, int second,int number) {
+
+	//コールバック関数
+	Sleep(second * 1000);
+
+	// 関数の実行
+	p(number);
+}
+
 int main(int argc,const char*argv[]) {
 	printf("start\n");
 	int number = 0;
@@ -37,11 +47,12 @@ int main(int argc,const char*argv[]) {
 	// ユーザーの入力を受付し、数に代入
 	scanf_s("%d", &number);
 
-	// 3秒後に実行するように
-	Sleep(3000);
+	setTimeOut(fx, 3, number);
+	//// 3秒後に実行するように
+	//Sleep(3000);
 
-	// 関数を呼び出し
-	fx(number);
+	//// 関数を呼び出し
+	//fx(number);
 
 	return 0;
 }
