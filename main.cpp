@@ -19,6 +19,7 @@ int main() {
 		SceneNo++;
 	}
 
+	system("pause");
 	return 0;
 
 }
