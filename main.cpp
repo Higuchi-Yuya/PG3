@@ -1,41 +1,24 @@
 #include <stdio.h>
-#include <list>
-#include <iostream>
-
+#include <Windows.h>
+#include "SceneManager.h"
 int main() {
-	std::list<const char*> Yamanote = { "Tokyo","Kanda","Akihabara","Okachimachi","Ueno",
-									  "Uguisudani","Nippori","Tabata","Komagome",
-									  "Sugamo","Otsuka","Ikebukuro","Mejiro" ,"Takadanobaba",
-									  "Shin-Okubo","Shinjuku","Yoyogi","Harajuku","Shibuya",
-									  "Ebisu","Meguro","Gotanda","Osaki","Shinagawa",
-									  "Tamachi","Hamamatsucho","Shimbashi","Yurakucho" };
-	// 出力
-	for (std::list<const char*>::iterator itr = Yamanote.begin(); itr != Yamanote.end(); ++itr) {
-		std::cout << *itr << std::endl;
-	}
-	//西日暮里を挿入
-	for (std::list<const char*>::iterator itr = Yamanote.begin(); itr != Yamanote.end(); ++itr) {
-		if (*itr == "Tabata") {
-			itr = Yamanote.insert(itr, "Nishi-Nippori");
-			++itr;
+	// インスタンスを取得する
+	SceneManager* sceneManager = SceneManager::GetInstance();
+	// シーンナンバー
+	int SceneNo = 0;
+
+	while (true) {
+		Sleep(1 * 1000);
+		
+		if (SceneNo > 3) {
+			SceneNo = 0;
 		}
-	}
-	// 出力
-	for (std::list<const char*>::iterator itr = Yamanote.begin(); itr != Yamanote.end(); ++itr) {
-		std::cout << *itr << std::endl;
+		// 使用する
+
+		sceneManager->ChangeScene(SceneNo);
+		SceneNo++;
 	}
 
-	// 高輪ゲートウェイを挿入
-	for (std::list<const char*>::iterator itr = Yamanote.begin(); itr != Yamanote.end(); ++itr) {
-		if (*itr == "Tamachi") {
-			itr = Yamanote.insert(itr, "Takanawa Gateway");
-			++itr;
-		}
-	}
-	// 出力
-	for (std::list<const char*>::iterator itr = Yamanote.begin(); itr != Yamanote.end(); ++itr) {
-		std::cout << *itr << std::endl;
-	}
 	return 0;
 
 }
