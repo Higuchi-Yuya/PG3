@@ -1,5 +1,12 @@
 #include "GameScene.h"
 
+GameScene::~GameScene()
+{
+	delete enemy1;
+	delete enemy2;
+	delete enemy3;
+}
+
 void GameScene::Initialize()
 {
 	enemy1->Initialize();
