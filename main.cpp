@@ -4,12 +4,12 @@
 int main() {
 	Enemy* enemy1 = new Enemy;
 	
-	int deadOrLife = 0;
+	enemy1->Initialize();
 
 	while (true) 
 	{
-		Sleep(1 * 1000);
 		enemy1->Update();
+		Sleep(1 * 1000);
 	}
 
 	return 0;

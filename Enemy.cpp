@@ -1,12 +1,20 @@
 #include "Enemy.h"
 #include <stdio.h>
 
-bool Enemy::IsDead;
 
+
+Enemy::Enemy()
+{
+	phaseNum = 0;
+}
+
+void Enemy::Initialize()
+{
+	phaseNum = 0;
+}
 
 void Enemy::Update()
 {
-	
 	(this->*pFunc[phaseNum])();
 	phaseNum++;
 	if (phaseNum > 2) {

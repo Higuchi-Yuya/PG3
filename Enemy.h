@@ -2,8 +2,9 @@
 class Enemy
 {
 public:
-	static bool IsDead;
+	Enemy();
 
+	void Initialize();
 	void Update();
 	void Proximity();
 	void Shooting();
