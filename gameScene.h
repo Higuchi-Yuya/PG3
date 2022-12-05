@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "Enemy.h"
 
-class gameScene
+class GameScene
 {
 
 public:

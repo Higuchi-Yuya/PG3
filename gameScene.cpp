@@ -1,13 +1,13 @@
-#include "gameScene.h"
+#include "GameScene.h"
 
-void gameScene::Initialize()
+void GameScene::Initialize()
 {
 	enemy1->Initialize();
 	enemy2->Initialize();
 	enemy3->Initialize();
 }
 
-void gameScene::Update()
+void GameScene::Update()
 {
 	printf("¶‚©‚·‚©ŽE‚·‚©A‘I‚ñ‚Å‚­‚¾‚³‚¢B\n‚P”Ô‚Ìê‡¶‚«‚é\n‚Q”Ô‚Ìê‡‚ ‚Ì¢À‚«\n");
 	scanf_s("%d", &deadOrLife);
@@ -29,7 +29,7 @@ void gameScene::Update()
 	enemy3->Update();
 }
 
-void gameScene::Draw()
+void GameScene::Draw()
 {
 	enemy1->Draw();
 	enemy2->Draw();
