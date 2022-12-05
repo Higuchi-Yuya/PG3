@@ -20,5 +20,6 @@ int main() {
 		Sleep(1 * 1000);
 	}
 
+	delete gamescene_;
 	return 0;
 }

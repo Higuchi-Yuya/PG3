@@ -6,6 +6,7 @@ class GameScene
 {
 
 public:
+	~GameScene();
 	void Initialize();
 	void Update();
 	void Draw();
