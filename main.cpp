@@ -1,10 +1,10 @@
-#include "gameScene.h"
+#include "GameScene.h"
 #include <windows.h>
 
 int main() {
 
 	// ŠÖ”‚ÌéŒ¾
-	gameScene* gamescene_ = new gameScene;
+	GameScene* gamescene_ = new GameScene;
 	gamescene_->Initialize();
 
 	// ƒQ[ƒ€ƒ‹[ƒv
