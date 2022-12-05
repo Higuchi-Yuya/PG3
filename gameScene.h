@@ -16,7 +16,7 @@ private:
 	Enemy* enemy2 = new Enemy;
 	Enemy* enemy3 = new Enemy;
 
-	int deadOrLife = 0;
+	int deadOrALive = 0;
 
 };
 
