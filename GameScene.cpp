@@ -17,9 +17,9 @@ void GameScene::Initialize()
 void GameScene::Update()
 {
 	printf("¶‚©‚·‚©E‚·‚©A‘I‚ñ‚Å‚­‚¾‚³‚¢B\n‚P”Ô‚Ìê‡¶‚«‚é\n‚Q”Ô‚Ìê‡‚ ‚Ì¢À‚«\n");
-	scanf_s("%d", &deadOrLife);
+	scanf_s("%d", &deadOrALive);
 
-	switch (deadOrLife)
+	switch (deadOrALive)
 	{
 	case 1:// ¶‚«‚é
 		Enemy::IsAlive = false;
