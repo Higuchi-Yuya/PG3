@@ -2,56 +2,34 @@
 #include <stdlib.h>
 #include <windows.h>
 #include <time.h>
-typedef void (*PFunc)(int*);
+#include "Enemy.h"
 
-void callback1(int* s) {
-	printf("%d秒後に実行されるよ\n", *s);
-}
 
-void setTimeoout(PFunc p, int second,int *number) {
-	// コールバック関数を呼び出す
-	Sleep(second);
-
-	p(number);
-}
-
-void gambling(int *number)
-{
-	srand(time(nullptr));
-	int randomNum = rand() % 36 + 1;
-	int number_ = *number;
-	printf("今回の目は%d\n", randomNum);
-
-	if (number_ % 2 == 0) {
-		if (randomNum % 2 == 0) {
-			printf("丁！！　当たりです！\n");
-		}
-		else
-		{
-			printf("半！！　はずれです！\n");
-		}
-	}
-	else {
-		if (randomNum % 2 == 0) {
-			printf("丁！！　はずれです！\n");
-		}
-		else
-		{
-			printf("半！！　当たりです！\n");
-		}
-	}
-
-}
 
 int main() {
-	printf("start\n");
-	int number = 0;
-	PFunc p;
-	scanf_s("%d", &number);
+	Enemy* enemy1 = new Enemy;
+	Enemy* enemy2 = new Enemy;
+	Enemy* enemy3 = new Enemy;
+	int deadOrLife = 0;
 
-	p = gambling;
-	//p(&number);
-	setTimeoout(p, 3000,&number);
+	printf("生かすか殺すか、選んでください。\n１番の場合生きる\n２番の場合あの世逝き\n");
+	scanf_s("%d", &deadOrLife);
+	
+	switch (deadOrLife)
+	{
+	case 1:// 生きる
+		Enemy::IsDead = false;
+		break;
+	case 2:// 死ぬ
+		Enemy::IsDead = true;
+		break;
+	default:
+		break;
+	}
+
+	enemy1->Update();
+	enemy2->Update();
+	enemy3->Update();
 
 
 	return 0;
