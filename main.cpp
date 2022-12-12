@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "Circle.h"
 #include "Rectangle.h"
 #include "IShape.h"
@@ -20,8 +18,8 @@ int main() {
 	for (int i = 0; i < size; i++)
 	{
 		ishape[i]->Draw();
+		ishape[i]->Size();
 	}
-
 
 	// ”jŠü
 	for (int i = 0; i < size; i++)

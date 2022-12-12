@@ -8,3 +8,8 @@ void IShape::Draw()
 {
 
 }
+
+void IShape::Size()
+{
+
+}

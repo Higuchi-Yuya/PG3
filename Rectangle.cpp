@@ -9,3 +9,9 @@ void Rectangle::Draw()
 {
 	printf("lŠp‚¢‚Ú‚­‚ª’a¶‚µ‚½‚æ\n");
 }
+
+void Rectangle::Size()
+{
+	int result = sizeX * sizeY;
+	printf("–ÊÏ:%d\n", result);
+}
