@@ -1,0 +1,11 @@
+#include "Circle.h"
+#include <stdio.h>
+Circle::~Circle()
+{
+	printf("è¡Ç≥ÇÍÇΩÇ‹ÇÈÅ`\n");
+}
+
+void Circle::Draw()
+{
+	printf("Ç‹ÇÒÇ‹ÇÈÇ»Ç⁄Ç≠Ç™íaê∂ÇµÇΩÇÊ\n");
+}
