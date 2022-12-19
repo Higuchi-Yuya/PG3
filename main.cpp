@@ -1,32 +1,9 @@
-#include "Circle.h"
-#include "Rectangle.h"
-#include "IShape.h"
+#include "GameManager.h"
 
 int main() {
-	// éŒ¾
-	int size = 2;
-	IShape* ishape[] =
-	{
-		new Circle,
-		new Rectangle
-	};
+	GameManager *gameRoop = new GameManager;
 
-	// XVˆ—
-
-
-	// •`‰æˆ—
-	for (int i = 0; i < size; i++)
-	{
-		ishape[i]->Draw();
-		ishape[i]->Size();
-	}
-
-	// ”jŠü
-	for (int i = 0; i < size; i++)
-	{
-		ishape[i]->~IShape();
-	}
-
+	gameRoop->run();
 
 	return 0;
 }
